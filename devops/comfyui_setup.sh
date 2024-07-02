@@ -1,5 +1,5 @@
 # Description: This script is used to configure the ComfyUI project.
-# Usage: bash configure_comfyui.sh
+# Usage: bash comfyui_setup.sh
 
 # Clone the ComfyUI repo
 git clone https://github.com/comfyanonymous/ComfyUI.git
@@ -9,6 +9,10 @@ git clone https://github.com/comfyanonymous/ComfyUI.git
 # Put your VAE in: models/vae
 cp stable-diffusion-webui/models/Stable-diffusion/* ComfyUI/models/checkpoints/
 cp stable-diffusion-webui/models/VAE-approx/* ComfyUI/models/vae/
+
+# If you have another UI installed and working with its own python venv you can use that venv to run ComfyUI. 
+source path_to_other_sd_gui/venv/bin/activate
+source ../../app/stable-diffusion-webui/venv/bin/activate
 
 cd ComfyUI
 
