@@ -27,8 +27,8 @@ python3 -m venv myenv
 source myenv/bin/activate
 
 # Install python dependencies
-python3 -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121
-python3 -m pip install -r requirements.txt
+python3 -m pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121 -i https://pypi.tuna.tsinghua.edu.cn/simple
+python3 -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 
 # Running
