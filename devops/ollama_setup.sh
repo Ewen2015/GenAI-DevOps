@@ -5,4 +5,4 @@ curl -fsSL https://ollama.com/install.sh | sh
 export OLLAMA_MODELS="/data/ollama/.ollama/models"
 export OLLAMA_HOST=0.0.0.0
 export OLLAMA_NUM_PARALLEL=4
-OLLAMA_MAX_LOADED_MODELS=2
+export OLLAMA_MAX_LOADED_MODELS=2
