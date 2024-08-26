@@ -1,0 +1,19 @@
+# /etc/systemd/system/ollama.service
+
+[Unit]
+Description=Ollama Service
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/ollama serve
+User=ollama
+Group=ollama
+Restart=always
+RestartSec=3
+Environment="PATH=/usr/local/cuda/bin:/root/.pyenv/shims:/root/.pyenv/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/root/bin"
+Environment="OLLAMA_HOST=0.0.0.0"
+Environment="OLLAMA_NUM_PARALLEL=4"
+Environment="OLLAMA_MODELS=/data/ollama/.ollama/models"
+
+[Install]
+WantedBy=default.target
